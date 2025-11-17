@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartmán Diamond</title>
+  <meta name="description" content="Apartmán Diamond Podhájska – komfortné ubytovanie pri termálnom kúpalisku.">
+
+  <!-- Preload najdôležitejších galériových fotiek (prvé zobrazenie) -->
+  <link rel="preload" href="assets/gallery/gallery-01.jpg" as="image">
+  <link rel="preload" href="assets/gallery/gallery-02.jpg" as="image">
+  <link rel="preload" href="assets/gallery/gallery-06.jpg" as="image">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div aria-hidden="true" class="logo">💎</div>
+        <div>
+          <h1 class="brand-title">Apartmán Diamond</h1>
+          <p class="brand-subtitle">Podhájska • komfortné ubytovanie</p>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia">
+        <a href="#galeria">Galéria</a>
+        <a href="#vybavenie">Vybavenie</a>
+        <a href="#cenik">Cenník</a>
+        <a href="#rezervacia">Rezervácia</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#recenzie">Recenzie</a>
+        <a href="#vylety-v-okoli">Okolie</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otvoriť menu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="#galeria" class="mobile-link">Galéria</a>
+      <a href="#vybavenie" class="mobile-link">Vybavenie</a>
+      <a href="#cenik" class="mobile-link">Cenník</a>
+      <a href="#rezervacia" class="mobile-link">Rezervácia</a>
+      <a href="#kontakt" class="mobile-link">Kontakt</a>
+      <a href="#recenzie" class="mobile-link">Recenzie</a>
+      <a href="#vylety-v-okoli" class="mobile-link">Okolie</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero section reveal" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Vitajte v Apartmáne Diamond</h2>
+        <p>Moderný a útulný apartmán ideálny na relax pri termálnom kúpalisku.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#rezervacia">Rezervovať pobyt</a>
+          <a class="btn ghost" href="#galeria">Pozrieť galériu</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap" aria-hidden="true">
+        <img class="hero-photo" src="assets/gallery/gallery-01.jpg" alt="Apartmán Diamond - interiér" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Galéria -->
+  <section class="section reveal" id="galeria">
+    <div class="container">
+      <h3>Galéria</h3>
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite">
+        <!-- Obrázky sa načítajú cez JS -->
+      </div>
+      <div class="gallery-actions">
+        <button id="toggle-gallery" class="gallery-toggle-btn">
+           <span id="toggle-text">Zobraziť viac</span>
+          <span class="arrow-icon">▼</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox modal -->
+  <div aria-hidden="true" class="lightbox" id="lightbox" role="dialog" aria-label="Galéria - rozšírený náhľad">
+    <button aria-label="Zavrieť" class="lightbox-close" id="lightboxClose">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Predošlá fotka">‹</button>
+    <img alt="Fotografia apartmánu" id="lightboxImg">
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Nasledujúca fotka">›</button>
+  </div>
+
+  <!-- Vybavenie -->
+  <section class="section alt reveal" id="vybavenie">
+    <div class="container">
+      <h3>Vybavenie</h3>
+      <div class="features">
+        <div class="feature"><div class="feature-icon">📶</div><div class="feature-title">Wi-Fi</div></div>
+        <div class="feature"><div class="feature-icon">🧊</div><div class="feature-title">Chladnička</div></div>
+        <div class="feature"><div class="feature-icon">🅿️</div><div class="feature-title">Bezplatné parkovanie</div></div>
+        <div class="feature"><div class="feature-icon">🍳</div><div class="feature-title">Dvojplatnička</div></div>
+        <div class="feature"><div class="feature-icon">♨️</div><div class="feature-title">Mikrovlnka</div></div>
+        <div class="feature"><div class="feature-icon">☕</div><div class="feature-title">Rýchlovarná kanvica</div></div>
+        <div class="feature"><div class="feature-icon">📺</div><div class="feature-title">TV</div></div>
+        <div class="feature"><div class="feature-icon">💨</div><div class="feature-title">Fén</div></div>
+        <div class="feature"><div class="feature-icon">❄️</div><div class="feature-title">Klimatizácia</div></div>
+        <div class="feature"><div class="feature-icon">🚿</div><div class="feature-title">Sprchový kút</div></div>
+        <div class="feature"><div class="feature-icon">☀️</div><div class="feature-title">Balkón/Lódžia</div></div>
+        <div class="feature"><div class="feature-icon">👶</div><div class="feature-title">Detská postielka</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cenník -->
+  <section id="cenik" class="section pricing-section reveal">
+    <div class="container">
+      <h2 class="section-title">Cenník</h2>
+      <p class="section-subtitle">min. počet nocí 2 / výhodnejšie ceny nad 7 nocí</p>
+
+      <div class="pricing-grid">
+
+        <!-- MIMO SEZÓNA -->
+        <article class="pricing-card">
+          <div class="pc-head">
+            <div class="pc-icon">🏡</div>
+            <h3 class="pc-title">Mimo sezóna</h3>
+            <div class="pc-dates">8.4.  – 30.4. </div>
+          </div>
+
+          <div class="pc-price">od 50€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>80€</strong></li>
+            <li><span>3 hostia / noc</span><strong>70€</strong></li>
+            <li><span>2 hostia / noc</span><strong>50€</strong></li>
+          </ul>
+
+          <a href="#rezervacia" class="pc-btn">Rezervovať</a>
+        </article>
+
+        <!-- LETNÁ SEZÓNA -->
+        <article class="pricing-card highlight-card">
+          <div class="pc-head">
+            <div class="pc-icon">🌞</div>
+            <h3 class="pc-title">Letná sezóna</h3>
+            <div class="pc-dates">1.5. – 31.10.</div>
+          </div>
+
+          <div class="pc-price">od 60€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>90€</strong></li>
+            <li><span>3 hostia / noc</span><strong>80€</strong></li>
+            <li><span>2 hostia / noc</span><strong>60€</strong></li>
+          </ul>
+
+          <a href="#rezervacia" class="pc-btn">Rezervovať</a>
+        </article>
+
+        <!-- ZIMNÁ SEZÓNA -->
+        <article class="pricing-card">
+          <div class="pc-head">
+            <div class="pc-icon">❄️</div>
+            <h3 class="pc-title">Zimná sezóna</h3>
+            <div class="pc-dates">9.1. – 31.3. , 1.11. – 20.12.</div>
+          </div>
+
+          <div class="pc-price">od 50€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>80€</strong></li>
+            <li><span>3 hostia / noc</span><strong>70€</strong></li>
+            <li><span>2 hostia / noc</span><strong>50€</strong></li>
+          </ul>
+
+          <a href="#rezervacia" class="pc-btn">Rezervovať</a>
+        </article>
+
+        <!-- VIANOCE / VEĽKÁ NOC -->
+        <article class="pricing-card">
+          <div class="pc-head">
+            <div class="pc-icon">🎁</div>
+            <h3 class="pc-title">Veľká noc, Vianoce</h3>
+            <div class="pc-dates">2.4. – 7.4. , 21.12. – 8.1.</div>
+          </div>
+
+          <div class="pc-price">od 60€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>90€</strong></li>
+            <li><span>3 hostia / noc</span><strong>80€</strong></li>
+            <li><span>2 hostia / noc</span><strong>60€</strong></li>
+          </ul>
+
+          <a href="#rezervacia" class="pc-btn">Rezervovať</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rezervácia -->
+  <section class="section alt reveal" id="rezervacia">
+    <div class="container">
+      <h3>Preveriť dostupnosť / Rezervácia</h3>
+      <form autocomplete="on" class="booking-form grid-two" id="bookingForm">
+        <div class="form-group">
+          <label for="name">Meno a priezvisko *</label>
+          <input id="name" name="name" placeholder="Ján Novák" required type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input id="email" name="email" placeholder="jan.novak@gmail.com" required type="email">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Príchod *</label>
+            <input id="checkin" name="checkin" required type="date">
+          </div>
+          <div class="form-group">
+            <label for="checkout">Odchod *</label>
+            <input id="checkout" name="checkout" required type="date">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests">Počet osôb *</label>
+            <input id="guests" max="4" min="2" name="guests" required type="number" value="2">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefón</label>
+            <input id="phone" name="phone" placeholder="+421 900 000 000" type="tel">
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Poznámka</label>
+          <textarea id="message" name="message" placeholder="Špeciálne požiadavky..." rows="4"></textarea>
+        </div>
+
+        <div class="booking-actions">
+          <button class="btn primary" type="submit">Odoslať žiadosť</button>
+        </div>
+        <p aria-live="polite" class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="section reveal" id="kontakt">
+    <div class="container">
+      <h3>Kontakt</h3>
+      <div class="contact-card">
+        <div class="contact-row"><strong>Email:</strong> <span>diamondpodhajska@gmail.com</span></div>
+        <div class="contact-row"><strong>Telefón:</strong> <span>+421905969754</span></div>
+        <div class="contact-row"><strong>Adresa:</strong> <span>Apartmán Diamond, Pod Vinohradmi 973 Podhájska, Slovensko</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recenzie -->
+  <section class="section alt reveal" id="recenzie">
+    <div class="container">
+      <h3>Recenzie</h3>
+      <div class="reviews">
+        <a class="btn primary" href="https://www.booking.com/hotel/sk/apartmanovy-dom-pod-vinohradmi-973-podhajska-podhajska.en-gb.html" target="_blank" rel="noopener">
+          Zobraziť recenzie na Bookingu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Výlety v okolí -->
+  <section class="section alt reveal" id="vylety-v-okoli">
+    <div class="container">
+      <h3>Výlety v okolí</h3>
+      <div class="trips-grid">
+        <div class="trip-card">
+          <div class="trip-icon">🗿</div>
+          <h4 class="trip-name">Socha Hrádockej Venuše</h4>
+          <p class="trip-distance">11.3 km</p>
+        </div>
+        <div class="trip-card">
+          <div class="trip-icon">✡️</div>
+          <h4 class="trip-name">Synagóga</h4>
+          <p class="trip-distance">11.3 km</p>
+        </div>
+        <div class="trip-card">
+          <div class="trip-icon">🔫</div>
+          <h4 class="trip-name">Energy Paintball</h4>
+          <p class="trip-distance">4.7 km</p>
+        </div>
+        <div class="trip-card">
+          <div class="trip-icon">⛪</div>
+          <h4 class="trip-name">Kláštor Mariánska Čeľaď</h4>
+          <p class="trip-distance">3.6 km</p>
+        </div>
+        <div class="trip-card">
+          <div class="trip-icon">🐴</div>
+          <h4 class="trip-name">Ranč Trilobit</h4>
+          <p class="trip-distance">7.9 km</p>
+        </div>
+        <div class="trip-card">
+          <div class="trip-icon">⛰️</div>
+          <h4 class="trip-name">Tankošský cer</h4>
+          <p class="trip-distance">4.7 km</p>
+        </div>
+        <div class="trip-card">
+          <div class="trip-icon">🔭</div>
+          <h4 class="trip-name">Rozhľadňa Žitavský luh</h4>
+          <p class="trip-distance">8.4 km</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="section reveal" id="mapa">
+    <div class="container">
+      <h3>Mapa</h3>
+      <div class="map-wrap">
+        <iframe 
+          src="https://www.google.com/maps?q=Apartmán+Diamond+Podhájska,+Pod+vinohradmi+973,+94148+Podhájska&output=embed" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa - Apartmán Diamond">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Apartmán Diamond • Všetky práva vyhradené</div>
+      <div class="footer-links">
+        <a href="#kontakt">Kontakt</a>
+        <a href="#rezervacia">Rezervácia</a>
+        <a href="#galeria">Galéria</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

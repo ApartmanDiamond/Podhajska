@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cenník - Apartmán Diamond</title>
+  <meta name="description" content="Cenník Apartmánu Diamond Podhájska – ceny za sezóny a počet hostí.">
+  <meta name="keywords" content="cenník, ceny, ubytovanie, apartmán, kalkulačka, sezóny, podhájska">
+  <meta name="author" content="Marek">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div aria-hidden="true" class="logo">💎</div>
+        <div>
+          <h1 class="brand-title">Apartmán Diamond</h1>
+          <p class="brand-subtitle">Podhájska • komfortné ubytovanie</p>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otvoriť menu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html" class="mobile-link">Domov</a>
+      <a href="galeria.html" class="mobile-link">Galéria</a>
+      <a href="vybavenie.html" class="mobile-link">Vybavenie</a>
+      <a href="cenik.html" class="mobile-link">Cenník</a>
+      <a href="rezervacia.html" class="mobile-link">Rezervácia</a>
+      <a href="kontakt.html" class="mobile-link">Kontakt</a>
+      <a href="recenzie.html" class="mobile-link">Recenzie</a>
+      <a href="okolie.html" class="mobile-link">Okolie</a>
+    </div>
+  </header>
+
+  <!-- Cenník intro -->
+  <section class="section reveal" id="cenik-intro">
+    <div class="container">
+      <h2 class="section-title">Cenník</h2>
+      <p class="section-subtitle">Transparentné ceny pre každý rozpočet</p>
+      <div class="pricing-intro-content">
+        <p>Naše ceny sú nastavené tak, aby boli dostupné pre všetkých. Minimálny pobyt je 2 noci, ale pri dlhších pobytoch nad 7 nocí získavate výhodnejšie ceny.</p>
+        <p>Použite náš kalkulátor cien nižšie alebo si prezrite jednotlivé sezóny.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Calculator -->
+  <section class="section alt reveal" id="pricing-calculator">
+    <div class="container">
+      <h2 class="section-title">Predbežný kalkulátor cien</h2>
+      <p class="section-subtitle">Spočítajte si svoju cenu</p>
+
+      <div class="calc-controls">
+        <div class="calc-group">
+          <label for="calc-guests">Počet hostí</label>
+          <input type="number" id="calc-guests" min="1" max="4" value="2">
+        </div>
+        <div class="calc-group">
+          <label for="calc-checkin">Príchod</label>
+          <input type="date" id="calc-checkin">
+        </div>
+        <div class="calc-group">
+          <label for="calc-checkout">Odchod</label>
+          <input type="date" id="calc-checkout">
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div class="result-display">
+          <span class="result-label">Celková cena:</span>
+          <span class="result-price" id="total-price">120€</span>
+        </div>
+        <div class="result-breakdown">
+          <span id="price-per-night">60€ / noc</span>
+          <span id="discount-info"></span>
+        </div>
+        <button class="btn primary" id="reserve-btn" style="margin-top: 16px;">Rezervovať s mojimi údajmi</button>
+        <p><strong>Termín rezervácie a cena za ubytovanie budú platné až po odsúhlasení majiteľa apartmánu</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cenník -->
+  <section id="cenik" class="section pricing-section reveal">
+    <div class="container">
+      <h2 class="section-title">Ceny podľa sezón</h2>
+      <p class="section-subtitle">Aktuálne ceny pre rôzne obdobia</p>
+
+      <div class="pricing-grid">
+
+        <!-- MIMO SEZÓNA -->
+        <article class="pricing-card">
+          <div class="pc-head">
+            <div class="pc-icon">🏡</div>
+            <h3 class="pc-title">Mimo sezóna</h3>
+            <div class="pc-dates">8.4.  – 30.4. </div>
+          </div>
+
+          <div class="pc-price">od 50€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>80€</strong></li>
+            <li><span>3 hostia / noc</span><strong>70€</strong></li>
+            <li><span>2 hostia / noc</span><strong>50€</strong></li>
+          </ul>
+
+          <a href="rezervacia.html" class="pc-btn">Rezervovať</a>
+        </article>
+
+        <!-- LETNÁ SEZÓNA -->
+        <article class="pricing-card highlight-card">
+          <div class="pc-head">
+            <div class="pc-icon">🌞</div>
+            <h3 class="pc-title">Letná sezóna</h3>
+            <div class="pc-dates">1.5. – 31.10.</div>
+          </div>
+
+          <div class="pc-price">od 60€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>90€</strong></li>
+            <li><span>3 hostia / noc</span><strong>80€</strong></li>
+            <li><span>2 hostia / noc</span><strong>60€</strong></li>
+          </ul>
+
+          <a href="rezervacia.html" class="pc-btn">Rezervovať</a>
+        </article>
+
+        <!-- ZIMNÁ SEZÓNA -->
+        <article class="pricing-card">
+          <div class="pc-head">
+            <div class="pc-icon">❄️</div>
+            <h3 class="pc-title">Zimná sezóna</h3>
+            <div class="pc-dates">9.1. – 31.3. , 1.11. – 20.12.</div>
+          </div>
+
+          <div class="pc-price">od 50€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>80€</strong></li>
+            <li><span>3 hostia / noc</span><strong>70€</strong></li>
+            <li><span>2 hostia / noc</span><strong>50€</strong></li>
+          </ul>
+
+          <a href="rezervacia.html" class="pc-btn">Rezervovať</a>
+        </article>
+
+        <!-- VIANOCE / VEĽKÁ NOC -->
+        <article class="pricing-card">
+          <div class="pc-head">
+            <div class="pc-icon">🎁</div>
+            <h3 class="pc-title">Veľká noc, Vianoce</h3>
+            <div class="pc-dates">1.4. – 7.4. , 21.12. – 8.1.</div>
+          </div>
+
+          <div class="pc-price">od 60€ <span>/ noc</span></div>
+
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>90€</strong></li>
+            <li><span>3 hostia / noc</span><strong>80€</strong></li>
+            <li><span>2 hostia / noc</span><strong>60€</strong></li>
+          </ul>
+
+          <a href="rezervacia.html" class="pc-btn">Rezervovať</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-column">
+        <h4>O nás</h4>
+        <p>Apartmán Diamond v Podhájskej ponúka komfortné ubytovanie blízko termálneho kúpaliska. Ideálne miesto pre relax a oddych.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Rýchle odkazy</h4>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </div>
+      <div class="footer-column">
+        <h4>Kontakt</h4>
+        <p>Email: diamondpodhajska@gmail.com</p>
+        <p>Telefón: +421 905 969 754</p>
+        <p>Adresa: Pod Vinohradmi 973, 941 48 Podhájska</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>© <span id="year"></span> Apartmán Diamond • Všetky práva vyhradené</div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

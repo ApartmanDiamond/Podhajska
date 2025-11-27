@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezervácia - Apartmán Diamond</title>
+  <meta name="description" content="Rezervácia Apartmánu Diamond Podhájska – overte dostupnosť a rezervujte pobyt.">
+  <meta name="keywords" content="rezervácia, ubytovanie, apartmán, dostupnosť, podhájska, termálne kúpalisko">
+  <meta name="author" content="Marek">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div aria-hidden="true" class="logo">💎</div>
+        <div>
+          <h1 class="brand-title">Apartmán Diamond</h1>
+          <p class="brand-subtitle">Podhájska • komfortné ubytovanie</p>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otvoriť menu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html" class="mobile-link">Domov</a>
+      <a href="galeria.html" class="mobile-link">Galéria</a>
+      <a href="vybavenie.html" class="mobile-link">Vybavenie</a>
+      <a href="cenik.html" class="mobile-link">Cenník</a>
+      <a href="rezervacia.html" class="mobile-link">Rezervácia</a>
+      <a href="kontakt.html" class="mobile-link">Kontakt</a>
+      <a href="recenzie.html" class="mobile-link">Recenzie</a>
+      <a href="okolie.html" class="mobile-link">Okolie</a>
+    </div>
+  </header>
+
+  <!-- Rezervácia intro -->
+  <section class="section reveal" id="rezervacia-intro">
+    <div class="container">
+      <h2 class="section-title">Rezervácia</h2>
+      <p class="section-subtitle">Rezervujte si svoj pobyt jednoducho a rýchlo</p>
+      <div class="pricing-intro-content">
+        <p>Vyplňte formulár nižšie a overte si dostupnosť termínu. Po odoslaní žiadosti vás budeme kontaktovať s potvrdením rezervácie.</p>
+        <p>Ak máte otázky, neváhajte nás kontaktovať.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Rezervácia -->
+  <section class="section alt reveal" id="rezervacia">
+    <div class="container">
+      <h3>Preveriť dostupnosť / Rezervácia</h3>
+      <form autocomplete="on" class="booking-form grid-two" id="bookingForm">
+        <div class="form-group">
+          <label for="name">Meno a priezvisko *</label>
+          <input id="name" name="name" placeholder="Ján Novák" required type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input id="email" name="email" placeholder="jan.novak@gmail.com" required type="email">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Príchod *</label>
+            <input id="checkin" name="checkin" required type="date">
+          </div>
+          <div class="form-group">
+            <label for="checkout">Odchod *</label>
+            <input id="checkout" name="checkout" required type="date">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests">Počet osôb *</label>
+            <input id="guests" max="4" min="2" name="guests" required type="number" value="2">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefón</label>
+            <input id="phone" name="phone" placeholder="+421 900 000 000" type="tel">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Predbežná cena (€)</label>
+          <input id="price" name="price" placeholder="Vypočítajte si cenu v cenníku" type="text" readonly>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Poznámka</label>
+          <textarea id="message" name="message" placeholder="Špeciálne požiadavky..." rows="4"></textarea>
+        </div>
+
+        <div class="form-group full">
+          <label class="checkbox-label">
+            <input type="checkbox" id="consent" name="consent" required>
+            Súhlasím so spracovaním osobných údajov podľa <a href="#" onclick="showPrivacyPolicy()">zásad ochrany súkromia</a>.
+          </label>
+        </div>
+
+        <div class="booking-actions">
+          <button class="btn primary" type="submit">Odoslať žiadosť</button>
+        </div>
+        <p aria-live="polite" class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-column">
+        <h4>O nás</h4>
+        <p>Apartmán Diamond v Podhájskej ponúka komfortné ubytovanie blízko termálneho kúpaliska. Ideálne miesto pre relax a oddych.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Rýchle odkazy</h4>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </div>
+      <div class="footer-column">
+        <h4>Kontakt</h4>
+        <p>Email: diamondpodhajska@gmail.com</p>
+        <p>Telefón: +421 905 969 754</p>
+        <p>Adresa: Pod Vinohradmi 973, 941 48 Podhájska</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>© <span id="year"></span> Apartmán Diamond • Všetky práva vyhradené</div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

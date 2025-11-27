@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galéria - Apartmán Diamond</title>
+  <meta name="description" content="Galéria Apartmánu Diamond Podhájska – fotografie interiéru a exteriéru.">
+  <meta name="keywords" content="galéria, fotografie, apartmán, interiér, exteriér, podhájska, termálne kúpalisko">
+  <meta name="author" content="Marek">
+
+  <!-- Preload najdôležitejších galériových fotiek (prvé zobrazenie) -->
+  <link rel="preload" href="assets/gallery/gallery-01.jpg" as="image">
+  <link rel="preload" href="assets/gallery/gallery-02.jpg" as="image">
+  <link rel="preload" href="assets/gallery/gallery-06.jpg" as="image">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div aria-hidden="true" class="logo">💎</div>
+        <div>
+          <h1 class="brand-title">Apartmán Diamond</h1>
+          <p class="brand-subtitle">Podhájska • komfortné ubytovanie</p>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otvoriť menu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html" class="mobile-link">Domov</a>
+      <a href="galeria.html" class="mobile-link">Galéria</a>
+      <a href="vybavenie.html" class="mobile-link">Vybavenie</a>
+      <a href="cenik.html" class="mobile-link">Cenník</a>
+      <a href="rezervacia.html" class="mobile-link">Rezervácia</a>
+      <a href="kontakt.html" class="mobile-link">Kontakt</a>
+      <a href="recenzie.html" class="mobile-link">Recenzie</a>
+      <a href="okolie.html" class="mobile-link">Okolie</a>
+    </div>
+  </header>
+
+  <!-- Galéria intro -->
+  <section class="section reveal" id="galeria-intro">
+    <div class="container">
+      <h2 class="section-title">Galéria</h2>
+      <p class="section-subtitle">Objavte krásu Apartmánu Diamond</p>
+      <div class="gallery-intro-content">
+        <p>Ponorte sa do našej galérie a presvedčte sa sami o kvalite a štýle Apartmánu Diamond. Fotografie zachytávajú moderný interiér, útulnú atmosféru a všetky detaily, ktoré robia váš pobyt nezabudnuteľným.</p>
+        <p>Od priestranného obývacej izby cez moderne zariadenú kuchyňu až po pohodlnú spálňu – každá fotografia rozpráva príbeh o komforte a elegancii.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galéria -->
+  <section class="section alt reveal" id="galeria">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite">
+        <!-- Obrázky sa načítajú cez JS -->
+      </div>
+      <div class="gallery-actions">
+        <button id="toggle-gallery" class="gallery-toggle-btn">
+           <span id="toggle-text">Zobraziť viac</span>
+          <span class="arrow-icon">▼</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galéria info -->
+  <section class="section reveal" id="galeria-info">
+    <div class="container">
+      <h2 class="section-title">Čo môžete očakávať</h2>
+      <p class="section-subtitle">Kvalita a detail v každom zábere</p>
+      <div class="gallery-features">
+        <div class="gallery-feature">
+          <div class="feature-icon-large">🏠</div>
+          <h3>Moderný interiér</h3>
+          <p>Súčasný dizajn s dôrazom na funkčnosť a estetiku</p>
+        </div>
+        <div class="gallery-feature">
+          <div class="feature-icon-large">🛋️</div>
+          <h3>Útulné prostredie</h3>
+          <p>Teplé farby a príjemná atmosféra pre relaxáciu</p>
+        </div>
+        <div class="gallery-feature">
+          <div class="feature-icon-large">☀️</div>
+          <h3>Prírodné svetlo</h3>
+          <p>Výhľad na okolie a dostatok denného svetla</p>
+        </div>
+        <div class="gallery-feature">
+          <div class="feature-icon-large">🛁</div>
+          <h3>Komfortné vybavenie</h3>
+          <p>Všetko potrebné pre príjemný pobyt</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox modal -->
+  <div aria-hidden="true" class="lightbox" id="lightbox" role="dialog" aria-label="Galéria - rozšírený náhľad">
+    <button aria-label="Zavrieť" class="lightbox-close" id="lightboxClose">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Predošlá fotka">‹</button>
+    <img alt="Fotografia apartmánu" id="lightboxImg">
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Nasledujúca fotka">›</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-column">
+        <h4>O nás</h4>
+        <p>Apartmán Diamond v Podhájskej ponúka komfortné ubytovanie blízko termálneho kúpaliska. Ideálne miesto pre relax a oddych.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Rýchle odkazy</h4>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </div>
+      <div class="footer-column">
+        <h4>Kontakt</h4>
+        <p>Email: diamondpodhajska@gmail.com</p>
+        <p>Telefón: +421 905 969 754</p>
+        <p>Adresa: Pod Vinohradmi 973, 941 48 Podhájska</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>© <span id="year"></span> Apartmán Diamond • Všetky práva vyhradené</div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

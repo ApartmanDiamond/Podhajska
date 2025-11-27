@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartmán Diamond</title>
+  <meta name="description" content="Apartmán Diamond Podhájska – komfortné ubytovanie pri termálnom kúpalisku.">
+  <meta name="keywords" content="apartmán, ubytovanie, podhájska, termálne kúpalisko, dovolenka, slovensko, komfortné bývanie">
+  <meta name="author" content="Marek">
+
+  <!-- Preload najdôležitejších galériových fotiek (prvé zobrazenie) -->
+  <link rel="preload" href="assets/gallery/gallery-01.jpg" as="image">
+  <link rel="preload" href="assets/gallery/gallery-02.jpg" as="image">
+  <link rel="preload" href="assets/gallery/gallery-06.jpg" as="image">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div aria-hidden="true" class="logo">💎</div>
+        <div>
+          <h1 class="brand-title">Apartmán Diamond</h1>
+          <p class="brand-subtitle">Podhájska • komfortné ubytovanie</p>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia">
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otvoriť menu">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="galeria.html" class="mobile-link">Galéria</a>
+      <a href="vybavenie.html" class="mobile-link">Vybavenie</a>
+      <a href="cenik.html" class="mobile-link">Cenník</a>
+      <a href="rezervacia.html" class="mobile-link">Rezervácia</a>
+      <a href="kontakt.html" class="mobile-link">Kontakt</a>
+      <a href="recenzie.html" class="mobile-link">Recenzie</a>
+      <a href="okolie.html" class="mobile-link">Okolie</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero section reveal" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Vitajte v Apartmáne Diamond</h2>
+        <p>Moderný a útulný apartmán ideálny na relax pri termálnom kúpalisku.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="rezervacia.html">Rezervovať pobyt</a>
+          <a class="btn ghost" href="galeria.html">Pozrieť galériu</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap" aria-hidden="true">
+        <img class="hero-photo" src="assets/gallery/gallery-01.jpg" alt="Apartmán Diamond - interiér" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- O apartmáne -->
+  <section class="section alt reveal" id="o-apartmane">
+    <div class="container">
+      <h2 class="section-title">O Apartmáne Diamond</h2>
+      <p class="section-subtitle">Vaša oáza pokoja v srdci Podhájska</p>
+      <div class="about-content">
+        <p>Apartmán Diamond je moderný a komfortný priestor pre 2-4 hostí, ideálne umiestnený blízko termálneho kúpaliska. Ponúkame všetko potrebné pre príjemný pobyt – od plne vybaveného interiéru až po bezplatné parkovanie.</p>
+        <p>Či už prichádzate na víkendový relax, rodinnú dovolenku alebo pracovnú cestu, náš apartmán poskytuje dokonalú kombináciu súkromia a pohodlia. Vychutnajte si termálne pramene, prechádzky v okolí alebo jednoducho oddychujte v útulnom prostredí.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vybavenie -->
+  <section class="section reveal" id="vybavenie-home">
+    <div class="container">
+      <h2 class="section-title">Vybavenie</h2>
+      <p class="section-subtitle">Všetko pre váš komfort</p>
+      <div class="features">
+        <div class="feature"><div class="feature-icon">📶</div><div class="feature-title">Wi-Fi</div></div>
+        <div class="feature"><div class="feature-icon">🧊</div><div class="feature-title">Chladnička</div></div>
+        <div class="feature"><div class="feature-icon">🅿️</div><div class="feature-title">Bezplatné parkovanie</div></div>
+        <div class="feature"><div class="feature-icon">🍳</div><div class="feature-title">Dvojplatnička</div></div>
+        <div class="feature"><div class="feature-icon">♨️</div><div class="feature-title">Mikrovlnka</div></div>
+        <div class="feature"><div class="feature-icon">☕</div><div class="feature-title">Rýchlovarná kanvica</div></div>
+        <div class="feature"><div class="feature-icon">📺</div><div class="feature-title">TV</div></div>
+        <div class="feature"><div class="feature-icon">💨</div><div class="feature-title">Fén</div></div>
+        <div class="feature"><div class="feature-icon">❄️</div><div class="feature-title">Klimatizácia</div></div>
+        <div class="feature"><div class="feature-icon">🚿</div><div class="feature-title">Sprchový kút</div></div>
+        <div class="feature"><div class="feature-icon">☀️</div><div class="feature-title">Balkón/Lódžia</div></div>
+        <div class="feature"><div class="feature-icon">👶</div><div class="feature-title">Detská postielka</div></div>
+      </div>
+      <div class="section-actions" style="text-align: center; margin-top: 24px;">
+        <a class="btn primary" href="vybavenie.html">Viac o vybavení</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cenník -->
+  <section class="section alt reveal" id="cenik-home">
+    <div class="container">
+      <h2 class="section-title">Cenník</h2>
+      <p class="section-subtitle">min. počet nocí 2 / výhodnejšie ceny nad 7 nocí</p>
+      <div class="pricing-grid">
+        <article class="pricing-card highlight-card">
+          <div class="pc-head">
+            <div class="pc-icon">🌞</div>
+            <h3 class="pc-title">Letná sezóna</h3>
+            <div class="pc-dates">1.5. – 31.10.</div>
+          </div>
+          <div class="pc-price">od 60€ <span>/ noc</span></div>
+          <ul class="pc-tiers">
+            <li><span>4 hostia / noc</span><strong>90€</strong></li>
+            <li><span>3 hostia / noc</span><strong>80€</strong></li>
+            <li><span>2 hostia / noc</span><strong>60€</strong></li>
+          </ul>
+          <a href="cenik.html" class="pc-btn">Celý cenník</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Okolie -->
+  <section class="section reveal" id="okolie-home">
+    <div class="container">
+      <h2 class="section-title">Okolie</h2>
+      <p class="section-subtitle">Objavte krásy Podhájska a okolia</p>
+      <div class="trips-grid">
+        <div class="trip-card">
+          <img src="assets/gallery/Socha Hrádockej Venuše.jpg" alt="Socha Hrádockej Venuše" class="trip-icon">
+          <h4 class="trip-name">Socha Hrádockej Venuše</h4>
+          <p class="trip-distance">11.3 km</p>
+        </div>
+        <div class="trip-card">
+          <img src="assets/gallery/Synagóga.jpg" alt="Synagóga" class="trip-icon">
+          <h4 class="trip-name">Synagóga</h4>
+          <p class="trip-distance">11.3 km</p>
+        </div>
+        <div class="trip-card">
+          <img src="assets/gallery/Energy Paintball.jpg" alt="Energy Paintball" class="trip-icon">
+          <h4 class="trip-name">Energy Paintball</h4>
+          <p class="trip-distance">4.7 km</p>
+        </div>
+        <div class="trip-card">
+          <img src="assets/gallery/Ranč Trilobit.png" alt="Ranč Trilobit" class="trip-icon">
+          <h4 class="trip-name">Ranč Trilobit</h4>
+          <p class="trip-distance">7.9 km</p>
+        </div>
+      </div>
+      <div class="section-actions" style="text-align: center; margin-top: 24px;">
+        <a class="btn primary" href="okolie.html">Viac o okolí</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recenzie -->
+  <section class="section alt reveal" id="recenzie-home">
+    <div class="container">
+      <h2 class="section-title">Recenzie</h2>
+      <p class="section-subtitle">Čo hovoria naši hostia</p>
+      <div class="reviews">
+        <p style="text-align: center; margin-bottom: 24px;">"Výborný apartmán, čistý, moderne zariadený. Perfektne umiestnený blízko termálneho kúpaliska. Určite sa vrátim!"</p>
+        <a class="btn primary" href="recenzie.html">Viac recenzií</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-column">
+        <h4>O nás</h4>
+        <p>Apartmán Diamond v Podhájskej ponúka komfortné ubytovanie blízko termálneho kúpaliska. Ideálne miesto pre relax a oddych.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Rýchle odkazy</h4>
+        <a href="galeria.html">Galéria</a>
+        <a href="vybavenie.html">Vybavenie</a>
+        <a href="cenik.html">Cenník</a>
+        <a href="rezervacia.html">Rezervácia</a>
+        <a href="recenzie.html">Recenzie</a>
+        <a href="okolie.html">Okolie</a>
+      </div>
+      <div class="footer-column">
+        <h4>Kontakt</h4>
+        <p>Email: diamondpodhajska@gmail.com</p>
+        <p>Telefón: +421 905 969 754</p>
+        <p>Adresa: Pod Vinohradmi 973, 941 48 Podhájska</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>© <span id="year"></span> Apartmán Diamond • Všetky práva vyhradené</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
